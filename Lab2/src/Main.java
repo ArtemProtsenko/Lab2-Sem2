@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -33,16 +34,30 @@ public class Main
         }
     }
 
-    static int matrixElement(int[][] matrixA, int[][] matrixB, int curWidth, int curHeight)
+    static int matrixElement(int[][] matrixA, int[][] matrixB, int curX, int curY)
     {
         int elem = 0;
 
         for(int i = 0; i < matrixB.length; i++)
         {
-            elem += (matrixA[curHeight][i] * matrixB[i][curWidth]);
+            elem += (matrixA[curY][i] * matrixB[i][curX]);
         }
 
         return elem;
+    }
+
+    static int maxElemFromCol(int[][] matrix, int curX)
+    {
+        int maxElem = matrix[0][curX];
+        for(int i = 1; i < matrix.length; i++)
+        {
+            if(maxElem < matrix[i][curX])
+            {
+                maxElem = matrix[i][curX];
+            }
+        }
+
+        return maxElem;
     }
 
     public static void main(String[] args)
@@ -122,6 +137,11 @@ public class Main
                     System.out.println("Matrix C:");
                     printMatrix(matrixC);
 
+                    for(int i = 0; i < matrixC.length; i++)
+                    {
+                        int maxElem = maxElemFromCol(matrixC, i);
+                        System.out.println("Max element in column " + (i + 1) + " is: " + maxElem);
+                    }
                 }
                 else
                 {
@@ -133,5 +153,6 @@ public class Main
         {
             System.out.println("Error: Input is not a number.");
         }
+
     }
 }
