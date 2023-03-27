@@ -53,29 +53,29 @@ public class Main
         System.out.println("C7 = " + 24 % 7 + ", elements type - int.");
         System.out.println("C11 = " + 24 % 11 + ", 'Обчислити суму найбільших елементів кожного стовпця матриці'.");
 
-        System.out.print("Enter min of matrix A: ");
-        String strMinA = myScanner.nextLine();
-
-        System.out.print("Enter max of matrix A: ");
-        String strMaxA = myScanner.nextLine();
-
         System.out.print("Enter width of matrix A: ");
         String strWidthA = myScanner.nextLine();
 
         System.out.print("Enter height of matrix A: ");
         String strHeightA = myScanner.nextLine();
 
-        System.out.print("Enter min of matrix B: ");
-        String strMinB = myScanner.nextLine();
+        System.out.print("Enter min of matrix A: ");
+        String strMinA = myScanner.nextLine();
 
-        System.out.print("Enter max of matrix B: ");
-        String strMaxB = myScanner.nextLine();
+        System.out.print("Enter max of matrix A: ");
+        String strMaxA = myScanner.nextLine();
 
         System.out.print("Enter width of matrix B: ");
         String strWidthB = myScanner.nextLine();
 
         System.out.print("Enter height of matrix B: ");
         String strHeightB = myScanner.nextLine();
+
+        System.out.print("Enter min of matrix B: ");
+        String strMinB = myScanner.nextLine();
+
+        System.out.print("Enter max of matrix B: ");
+        String strMaxB = myScanner.nextLine();
 
         if (isNumber(strMinA) && isNumber(strMaxA) && isNumber(strMinB) && isNumber(strMaxB) && isNumber(strWidthA) &&
                 isNumber(strHeightA) && isNumber(strWidthB) && isNumber(strHeightB))
